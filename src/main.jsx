@@ -13,6 +13,7 @@ import AppliedJobs from './components/Applied-jobs/AppliedJobs';
 import Blogs from './components/Blogs/Blogs';
 import Statistics from './components/Statistics/Statistics';
 import ErrorElement from './components/Error/ErrorElement';
+import JobDetails from './components/JobDetails/JobDetails';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
       {
         path:'/Statistics',
         element:<Statistics></Statistics>
+      },
+      {
+        path:'/Job/:id',
+        element:<JobDetails></JobDetails>,
+        loader:() => fetch('https://raw.githubusercontent.com/saad1ibn2akhter/fake-data-react-career-hub-1/main/fake-data')
       }
     ]
   },
