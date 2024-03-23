@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path:'/AppliedJobs',
         element: <AppliedJobs></AppliedJobs>,
-        loader:() => fetch('https://raw.githubusercontent.com/saad1ibn2akhter/fake-data-react-career-hub-1/main/fake-data')
+        loader:() => fetch('/jobs.json')
         // loader:()=>fetch('../../jobs.json')
       },
       {
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
       {
         path:'/Job/:id',
         element:<JobDetails></JobDetails>,
-        loader:() => fetch('https://raw.githubusercontent.com/saad1ibn2akhter/fake-data-react-career-hub-1/main/fake-data')
+        loader:() => fetch('/jobs.json')
       }
     ]
   },
