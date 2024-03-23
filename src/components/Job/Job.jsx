@@ -9,7 +9,7 @@ const Job = ({ job }) => {
             <figure><img src={logo} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{job_title}</h2>
-                <div className='text-start'>
+                <div className='text-start flex-1'>
                     <p>{company_name}</p>
                     <p>{location}</p>
                     <p>{salary}</p>

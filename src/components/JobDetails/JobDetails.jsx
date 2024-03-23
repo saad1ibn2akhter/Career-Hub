@@ -37,12 +37,16 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { savedJobApplication } from '../utility/localStorage';
 
 const JobDetails = () => {
     const [job, setJob] = useState(null);
     const { id } = useParams();
 
-    const notify = () => toast("Added to container");
+    const notify = () =>{
+        toast.success("Application Submitted Succesfully!!");
+        savedJobApplication(id);
+    }
 
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/saad1ibn2akhter/fake-data-react-career-hub-1/main/fake-data')
