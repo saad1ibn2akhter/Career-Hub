@@ -33,6 +33,7 @@ const router = createBrowserRouter([
         path:'/AppliedJobs',
         element: <AppliedJobs></AppliedJobs>,
         loader:() => fetch('https://raw.githubusercontent.com/saad1ibn2akhter/fake-data-react-career-hub-1/main/fake-data')
+        // loader:()=>fetch('../../jobs.json')
       },
       {
         path:'/Blogs',

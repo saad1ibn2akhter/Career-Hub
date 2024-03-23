@@ -1,3 +1,4 @@
+
 const getStoredJobApplication = () =>{
     const storedJobApplication = localStorage.getItem('job-applications');
     if(storedJobApplication){
