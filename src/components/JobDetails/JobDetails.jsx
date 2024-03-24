@@ -1,44 +1,11 @@
 
-// import { useLoaderData, useParams } from 'react-router-dom';
-
-
-// const JobDetails = () => {
-//     const jobs = useLoaderData();
-
-//     const { id } = useParams();
-//     const intId = parseInt(id);
-//     let job;
-//     let f;
-//     for (let i = 0; i < jobs.length; i++) {
-//         f = parseInt(jobs[i].id);
-//         console.log('ID of current job:', jobs[i].id);
-//         console.log('Parsed ID:', f);
-//         if (f === intId) {
-//             job = jobs[i];
-//             break;
-//         }
-//     }
-    
-
-
-//     return (
-//         <>
-//             <div>
-
-
-//             </div>
-//         </>
-//     );
-// };
-
-// export default JobDetails;
 
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { savedJobApplication } from '../utility/localStorage';
-// import SomethingNew from '../Applied-jobs/SomethingNew';
+
 
 const JobDetails = () => {
     const [job, setJob] = useState(null);
@@ -71,10 +38,6 @@ const JobDetails = () => {
             <h1>{salary}</h1>
             <button onClick={notify} className='btn '>Apply Now</button>
             <ToastContainer />
-            {/* <h2>{job.job_title}</h2>
-            <p>Company: {job.company_name}</p>
-            <p>Location: {job.location}</p> */}
-            {/* Add more job details as needed */}
         </div>
     );
 };

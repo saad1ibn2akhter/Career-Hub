@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../utility/localStorage";
 import SomethingNew from "./SomethingNew";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AppliedJobs = () => {
     const jobs = useLoaderData();
@@ -49,6 +51,13 @@ const AppliedJobs = () => {
         }
     }
 
+    const clearStorage =() =>{
+        toast.success("Local Storage cleeared sucesfully .");
+        window.location.reload();
+        localStorage.clear();
+       
+    }
+
     return (
         <>
             {/* <div>
@@ -77,6 +86,11 @@ const AppliedJobs = () => {
                 {
                     Jobs.map((job, index) => <SomethingNew key={index} Job={job} />)
                 }
+            </div>
+
+            <div>
+                <button className="btn btn-primary" onClick={clearStorage}>Clean All Datas</button>
+                <ToastContainer />
             </div>
 
         </>
