@@ -4,6 +4,7 @@ import { getStoredJobApplication } from "../utility/localStorage";
 import SomethingNew from "./SomethingNew";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../../../public/font.css'
 
 const AppliedJobs = () => {
     const jobs = useLoaderData();
@@ -82,13 +83,13 @@ const AppliedJobs = () => {
 
             </div> */}
 
-            <div className="border p-4">
+            <div className="border p-4 font">
                 {
                     Jobs.map((job, index) => <SomethingNew key={index} Job={job} />)
                 }
             </div>
 
-            <div>
+            <div className="font">
                 <button className="btn btn-primary" onClick={clearStorage}>Clean All Datas</button>
                 <ToastContainer />
             </div>

@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h2 className='capitalize'>this is home</h2>
+            {/* <h2 className='capitalize'>this is home</h2> */}
             <CategoryList></CategoryList>
             <Featuredjobs></Featuredjobs>
         </div>

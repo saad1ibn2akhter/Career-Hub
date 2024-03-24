@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../../../public/font.css'
 
 const Job = ({ job }) => {
     const {id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
 
-        <div className="card card-compact w-96 bg-base-100 shadow-xl p-4">
+        <div className="card card-compact w-96 bg-base-100 shadow-xl p-4 font">
             <figure><img src={logo} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{job_title}</h2>

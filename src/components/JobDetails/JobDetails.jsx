@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { savedJobApplication } from '../utility/localStorage';
+import '../../../public/font.css'
 
 
 const JobDetails = () => {
@@ -34,7 +35,7 @@ const JobDetails = () => {
     }
     const {salary} = job;
     return (
-        <div>
+        <div className='font'>
             <h1>{salary}</h1>
             <button onClick={notify} className='btn '>Apply Now</button>
             <ToastContainer />
