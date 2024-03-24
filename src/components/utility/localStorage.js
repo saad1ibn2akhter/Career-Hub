@@ -9,7 +9,7 @@ const getStoredJobApplication = () =>{
     return [];
 }
 
-const savedJobApplication = id =>{
+const savedJobApplication = (id , salary) =>{
     const storedJobApplication = getStoredJobApplication();
     const exists = storedJobApplication.find(jobId => jobId === id);
     if(!exists){
